@@ -20,7 +20,10 @@ const routes: Routes = [
    loadChildren: './about/about.module#AboutPageModule' },
 
   { path: 'cause',
-   loadChildren: './cause/cause.module#CausePageModule' }
+   loadChildren: './cause/cause.module#CausePageModule' },
+   
+  { path: 'symptoms',
+   loadChildren: './symptoms/symptoms.module#SymptomsPageModule' }
 ];
 
 @NgModule({
