@@ -1,0 +1,64 @@
+﻿@model IEnumerable<MalariaBackend.Models.Symptom>
+
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <link href="~/PortView/css/style.css" rel='stylesheet' type='text/css' />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+</head>
+
+<h2 style="font-size:30px">Malaria Signs & Symptoms</h2> 
+<br />
+
+<p>
+    @Html.ActionLink("Add New Symptom", "Create")
+</p> 
+<br /> 
+<table class="table">
+    <tr style="font-size:21px">
+        <th>
+           Symptom Name
+        </th>
+        <th>
+            Symptom Description
+        <th>
+            Sign Name
+        </th>
+        <th>
+            Sign Description
+        </th>
+        <th>
+            About Malaria Descritpion
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symptom_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Symptom_Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sign_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sign_Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.About_Malaria.Malaria_Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Symptom_ID }) | |
+                
+                @Html.ActionLink("Delete", "Delete", new { id = item.Symptom_ID })
+            </td>
+        </tr>
+    }
+
+</table>

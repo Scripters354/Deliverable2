@@ -1,0 +1,31 @@
+﻿@model MalariaBackend.Models.User_Role
+
+@{
+    ViewBag.Title = "Details";
+}
+<head>
+    <link href="~/PortView/css/style.css" rel='stylesheet' type='text/css' />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+</head>
+
+<h2>Details</h2>
+
+<div>
+    <h4>User_Role</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.User_Role_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.User_Role_Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.User_Role_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

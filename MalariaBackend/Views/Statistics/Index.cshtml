@@ -1,0 +1,58 @@
+﻿@model IEnumerable<MalariaBackend.Models.Statistic>
+
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <link href="~/PortView/css/style.css" rel='stylesheet' type='text/css' />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+</head>
+
+<h2 style="font-size:30px">Statistics</h2> 
+<br />
+
+<p>
+    @Html.ActionLink("New Statistic", "Create")
+</p>
+<table class="table">
+    <tr style="font-size:21px">
+        <th>
+            Malaria Case
+        </th>
+        <th>
+            Incidence
+        </th>
+        <th>
+            Mortality Percentage
+        </th>
+        <th>
+            About Malaria Description
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Malaria_Case)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Malaria_Incidence)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Malaria_Mortality_Percentage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.About_Malaria.Malaria_Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Statistic_ID }) | |
+                
+                @Html.ActionLink("Delete", "Delete", new { id = item.Statistic_ID })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<MalariaBackend.Models.User>
+
+@{
+    ViewBag.Title = "Index";
+}
+<head>
+    <link href="~/PortView/css/style.css" rel='stylesheet' type='text/css' />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+</head>
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User_Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GUID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GUID_Expiry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User_Role.User_Role_Description)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.User_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User_Password)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GUID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GUID_Expiry)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.User_Role.User_Role_Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.User_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.User_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.User_ID })
+            </td>
+        </tr>
+    }
+
+</table>

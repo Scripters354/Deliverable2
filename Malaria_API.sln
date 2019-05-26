@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.645
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Malaria_API", "Malaria_API\Malaria_API.csproj", "{1C438861-F7D2-4AE0-B6E0-CBECA762F0CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MalariaBackend", "MalariaBackend\MalariaBackend.csproj", "{059BF8A7-1D65-456C-80CE-8756A569F8DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C438861-F7D2-4AE0-B6E0-CBECA762F0CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C438861-F7D2-4AE0-B6E0-CBECA762F0CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C438861-F7D2-4AE0-B6E0-CBECA762F0CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C438861-F7D2-4AE0-B6E0-CBECA762F0CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{059BF8A7-1D65-456C-80CE-8756A569F8DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{059BF8A7-1D65-456C-80CE-8756A569F8DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{059BF8A7-1D65-456C-80CE-8756A569F8DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{059BF8A7-1D65-456C-80CE-8756A569F8DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {13E8C271-2F85-4ED1-862A-A6FAC0263D60}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="21a0b64545044e6fa87fd84aaf63936f" Name="Diagram1">
+        <EntityTypeShape EntityType="DBMobile_AppModel.About_Malaria" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.Cause" Width="1.5" PointX="3" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.FAQ" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.Help_Line" Width="1.5" PointX="3" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.Malaria_Risk_Zone" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.Post_Update" Width="1.5" PointX="3" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.Prevention" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.Publication" Width="1.5" PointX="3" PointY="18.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.Statistic" Width="1.5" PointX="3" PointY="21.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.Symptom" Width="1.5" PointX="3" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.Treatment" Width="1.5" PointX="3" PointY="27.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.User" Width="1.5" PointX="8" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.User_Role" Width="1.5" PointX="5.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__Cause__About_Mal__1273C1CD" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__FAQ__About_Malar__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__Help_Line__About__30F848ED" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__Malaria_R__About__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__Post_Upda__About__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__Preventio__About__1FCDBCEB" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__Publicati__About__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__Statistic__About__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__Symptom__About_M__1CF15040" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__Treatment__About__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="DBMobile_AppModel.FK__User__User_Role___1A14E395" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.Employee" Width="1.5" PointX="5.375" PointY="4.75" />
+        <EntityTypeShape EntityType="DBMobile_AppModel.sysdiagram" Width="1.5" PointX="7.375" PointY="4.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

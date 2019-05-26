@@ -1,0 +1,57 @@
+﻿@model MalariaBackend.Models.Cause
+
+@{
+                /**/
+
+                ViewBag.Title = "Delete";
+}
+<head>
+    <link href="~/PortView/css/style.css" rel='stylesheet' type='text/css' />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+</head>
+
+<h2>Details to be removed!</h2>
+
+<h3></h3>
+<div>
+    <h4></h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Cause 
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cause_Name)
+        </dd>
+
+        <dt>
+           Cause Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cause_Description)
+        </dd>
+
+        <dt>
+            About Malaria Description
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.About_Malaria.Malaria_Description)
+        </dd>
+
+    </dl> 
+    <br />
+
+    @using (Html.BeginForm())
+    {
+@Html.AntiForgeryToken()
+
+<div class="form-actions no-color">
+    <input type="submit" value="Remove details" class="btn btn-default" /> 
+   
+</div>
+}
+</div>

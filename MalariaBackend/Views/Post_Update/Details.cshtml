@@ -1,0 +1,39 @@
+﻿@model MalariaBackend.Models.Post_Update
+
+@{
+    ViewBag.Title = "Details";
+}
+<head>
+    <link href="~/PortView/css/style.css" rel='stylesheet' type='text/css' />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+</head>
+
+<h2>Details</h2>
+
+<div>
+    <h4>Post_Update</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Post_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Post_Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.About_Malaria.Malaria_Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.About_Malaria.Malaria_Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Post_Update_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

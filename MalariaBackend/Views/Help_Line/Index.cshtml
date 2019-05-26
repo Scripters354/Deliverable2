@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MalariaBackend.Models.Help_Line>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<head>
+    <link href="~/PortView/css/style.css" rel='stylesheet' type='text/css' />
+
+    <link href="//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet">
+</head>
+
+<p>
+    @Html.ActionLink("Add New", "Create")
+</p>
+<table class="table">
+    <tr style="font-size:20px">
+        <th>
+           Contact No.
+        </th>
+        <th>
+            Organisation/Practitioner
+        </th>
+      
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Help_Line_Contact)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Help_Line_Practioner)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.About_Malaria.Malaria_Description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Help_Line_ID }) |
+                 @Html.ActionLink("Delete", "Delete", new { id = item.Help_Line_ID })
+            </td>
+        </tr>
+    }
+
+</table>

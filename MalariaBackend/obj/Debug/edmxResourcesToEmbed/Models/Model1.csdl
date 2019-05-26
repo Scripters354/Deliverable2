@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DBMobile_AppModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="About_Malaria">
+    <Key>
+      <PropertyRef Name="About_Malaria_ID" />
+    </Key>
+    <Property Name="About_Malaria_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Malaria_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Causes" Relationship="Self.FK__Cause__About_Mal__7F60ED59" FromRole="About_Malaria" ToRole="Cause" />
+    <NavigationProperty Name="FAQs" Relationship="Self.FK__FAQ__About_Malar__1273C1CD" FromRole="About_Malaria" ToRole="FAQ" />
+    <NavigationProperty Name="Help_Line" Relationship="Self.FK__Help_Line__About__1DE57479" FromRole="About_Malaria" ToRole="Help_Line" />
+    <NavigationProperty Name="Malaria_Risk_Zone" Relationship="Self.FK__Malaria_R__About__1B0907CE" FromRole="About_Malaria" ToRole="Malaria_Risk_Zone" />
+    <NavigationProperty Name="Post_Update" Relationship="Self.FK__Post_Upda__About__0F975522" FromRole="About_Malaria" ToRole="Post_Update" />
+    <NavigationProperty Name="Preventions" Relationship="Self.FK__Preventio__About__0CBAE877" FromRole="About_Malaria" ToRole="Prevention" />
+    <NavigationProperty Name="Publications" Relationship="Self.FK__Publicati__About__15502E78" FromRole="About_Malaria" ToRole="Publication" />
+    <NavigationProperty Name="Statistics" Relationship="Self.FK__Statistic__About__182C9B23" FromRole="About_Malaria" ToRole="Statistic" />
+    <NavigationProperty Name="Symptoms" Relationship="Self.FK__Symptom__About_M__09DE7BCC" FromRole="About_Malaria" ToRole="Symptom" />
+    <NavigationProperty Name="Treatments" Relationship="Self.FK__Treatment__About__023D5A04" FromRole="About_Malaria" ToRole="Treatment" />
+  </EntityType>
+  <EntityType Name="Cause">
+    <Key>
+      <PropertyRef Name="Cause_ID" />
+    </Key>
+    <Property Name="Cause_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About_Malaria_ID" Type="Int32" />
+    <Property Name="Cause_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Cause_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="About_Malaria" Relationship="Self.FK__Cause__About_Mal__7F60ED59" FromRole="Cause" ToRole="About_Malaria" />
+  </EntityType>
+  <EntityType Name="FAQ">
+    <Key>
+      <PropertyRef Name="FAQ_ID" />
+    </Key>
+    <Property Name="FAQ_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About_Malaria_ID" Type="Int32" />
+    <Property Name="FAQ_Question" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="FAQ_Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="About_Malaria" Relationship="Self.FK__FAQ__About_Malar__1273C1CD" FromRole="FAQ" ToRole="About_Malaria" />
+  </EntityType>
+  <EntityType Name="Help_Line">
+    <Key>
+      <PropertyRef Name="Help_Line_ID" />
+    </Key>
+    <Property Name="Help_Line_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About_Malaria_ID" Type="Int32" />
+    <Property Name="Help_Line_Contact" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Help_Line_Practioner" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="About_Malaria" Relationship="Self.FK__Help_Line__About__1DE57479" FromRole="Help_Line" ToRole="About_Malaria" />
+  </EntityType>
+  <EntityType Name="Malaria_Risk_Zone">
+    <Key>
+      <PropertyRef Name="Malaria_Risk_Zone_ID" />
+    </Key>
+    <Property Name="Malaria_Risk_Zone_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About_Malaria_ID" Type="Int32" />
+    <Property Name="Risk_Zone_Location" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Risk_Zone" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Severity" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="About_Malaria" Relationship="Self.FK__Malaria_R__About__1B0907CE" FromRole="Malaria_Risk_Zone" ToRole="About_Malaria" />
+  </EntityType>
+  <EntityType Name="Post_Update">
+    <Key>
+      <PropertyRef Name="Post_Update_ID" />
+    </Key>
+    <Property Name="Post_Update_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About_Malaria_ID" Type="Int32" />
+    <Property Name="Post_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="About_Malaria" Relationship="Self.FK__Post_Upda__About__0F975522" FromRole="Post_Update" ToRole="About_Malaria" />
+  </EntityType>
+  <EntityType Name="Prevention">
+    <Key>
+      <PropertyRef Name="Prevention_ID" />
+    </Key>
+    <Property Name="Prevention_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About_Malaria_ID" Type="Int32" />
+    <Property Name="Prevention_Method" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="About_Malaria" Relationship="Self.FK__Preventio__About__0CBAE877" FromRole="Prevention" ToRole="About_Malaria" />
+  </EntityType>
+  <EntityType Name="Publication">
+    <Key>
+      <PropertyRef Name="Publication_ID" />
+    </Key>
+    <Property Name="Publication_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About_Malaria_ID" Type="Int32" />
+    <Property Name="Publication_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Publication_Link" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="About_Malaria" Relationship="Self.FK__Publicati__About__15502E78" FromRole="Publication" ToRole="About_Malaria" />
+  </EntityType>
+  <EntityType Name="Statistic">
+    <Key>
+      <PropertyRef Name="Statistic_ID" />
+    </Key>
+    <Property Name="Statistic_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About_Malaria_ID" Type="Int32" />
+    <Property Name="Malaria_Case" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Malaria_Incidence" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Malaria_Mortality_Percentage" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="About_Malaria" Relationship="Self.FK__Statistic__About__182C9B23" FromRole="Statistic" ToRole="About_Malaria" />
+  </EntityType>
+  <EntityType Name="Symptom">
+    <Key>
+      <PropertyRef Name="Symptom_ID" />
+    </Key>
+    <Property Name="Symptom_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About_Malaria_ID" Type="Int32" />
+    <Property Name="Symptom_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Symptom_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Sign_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Sign_Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="About_Malaria" Relationship="Self.FK__Symptom__About_M__09DE7BCC" FromRole="Symptom" ToRole="About_Malaria" />
+  </EntityType>
+  <EntityType Name="Treatment">
+    <Key>
+      <PropertyRef Name="Treatment_ID" />
+    </Key>
+    <Property Name="Treatment_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="About_Malaria_ID" Type="Int32" />
+    <Property Name="Treatment_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="About_Malaria" Relationship="Self.FK__Treatment__About__023D5A04" FromRole="Treatment" ToRole="About_Malaria" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Role_ID" Type="Int32" Nullable="false" />
+    <Property Name="User_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="User_Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="GUID" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="GUID_Expiry" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="User_Role" Relationship="Self.FK__User__User_Role___07020F21" FromRole="User" ToRole="User_Role" />
+  </EntityType>
+  <EntityType Name="User_Role">
+    <Key>
+      <PropertyRef Name="User_Role_ID" />
+    </Key>
+    <Property Name="User_Role_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_Role_Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Users" Relationship="Self.FK__User__User_Role___07020F21" FromRole="User_Role" ToRole="User" />
+  </EntityType>
+  <Association Name="FK__Cause__About_Mal__7F60ED59">
+    <End Role="About_Malaria" Type="Self.About_Malaria" Multiplicity="0..1" />
+    <End Role="Cause" Type="Self.Cause" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="About_Malaria">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Principal>
+      <Dependent Role="Cause">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FAQ__About_Malar__1273C1CD">
+    <End Role="About_Malaria" Type="Self.About_Malaria" Multiplicity="0..1" />
+    <End Role="FAQ" Type="Self.FAQ" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="About_Malaria">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Principal>
+      <Dependent Role="FAQ">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Help_Line__About__1DE57479">
+    <End Role="About_Malaria" Type="Self.About_Malaria" Multiplicity="0..1" />
+    <End Role="Help_Line" Type="Self.Help_Line" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="About_Malaria">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Principal>
+      <Dependent Role="Help_Line">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Malaria_R__About__1B0907CE">
+    <End Role="About_Malaria" Type="Self.About_Malaria" Multiplicity="0..1" />
+    <End Role="Malaria_Risk_Zone" Type="Self.Malaria_Risk_Zone" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="About_Malaria">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Principal>
+      <Dependent Role="Malaria_Risk_Zone">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Post_Upda__About__0F975522">
+    <End Role="About_Malaria" Type="Self.About_Malaria" Multiplicity="0..1" />
+    <End Role="Post_Update" Type="Self.Post_Update" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="About_Malaria">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Principal>
+      <Dependent Role="Post_Update">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Preventio__About__0CBAE877">
+    <End Role="About_Malaria" Type="Self.About_Malaria" Multiplicity="0..1" />
+    <End Role="Prevention" Type="Self.Prevention" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="About_Malaria">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Principal>
+      <Dependent Role="Prevention">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Publicati__About__15502E78">
+    <End Role="About_Malaria" Type="Self.About_Malaria" Multiplicity="0..1" />
+    <End Role="Publication" Type="Self.Publication" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="About_Malaria">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Principal>
+      <Dependent Role="Publication">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Statistic__About__182C9B23">
+    <End Role="About_Malaria" Type="Self.About_Malaria" Multiplicity="0..1" />
+    <End Role="Statistic" Type="Self.Statistic" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="About_Malaria">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Principal>
+      <Dependent Role="Statistic">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Symptom__About_M__09DE7BCC">
+    <End Role="About_Malaria" Type="Self.About_Malaria" Multiplicity="0..1" />
+    <End Role="Symptom" Type="Self.Symptom" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="About_Malaria">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Principal>
+      <Dependent Role="Symptom">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Treatment__About__023D5A04">
+    <End Role="About_Malaria" Type="Self.About_Malaria" Multiplicity="0..1" />
+    <End Role="Treatment" Type="Self.Treatment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="About_Malaria">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Principal>
+      <Dependent Role="Treatment">
+        <PropertyRef Name="About_Malaria_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__User__User_Role___07020F21">
+    <End Role="User_Role" Type="Self.User_Role" Multiplicity="1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User_Role">
+        <PropertyRef Name="User_Role_ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="User_Role_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBMobile_AppEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="About_Malaria" EntityType="Self.About_Malaria" />
+    <EntitySet Name="Causes" EntityType="Self.Cause" />
+    <EntitySet Name="FAQs" EntityType="Self.FAQ" />
+    <EntitySet Name="Help_Line" EntityType="Self.Help_Line" />
+    <EntitySet Name="Malaria_Risk_Zone" EntityType="Self.Malaria_Risk_Zone" />
+    <EntitySet Name="Post_Update" EntityType="Self.Post_Update" />
+    <EntitySet Name="Preventions" EntityType="Self.Prevention" />
+    <EntitySet Name="Publications" EntityType="Self.Publication" />
+    <EntitySet Name="Statistics" EntityType="Self.Statistic" />
+    <EntitySet Name="Symptoms" EntityType="Self.Symptom" />
+    <EntitySet Name="Treatments" EntityType="Self.Treatment" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="User_Role" EntityType="Self.User_Role" />
+    <AssociationSet Name="FK__Cause__About_Mal__7F60ED59" Association="Self.FK__Cause__About_Mal__7F60ED59">
+      <End Role="About_Malaria" EntitySet="About_Malaria" />
+      <End Role="Cause" EntitySet="Causes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FAQ__About_Malar__1273C1CD" Association="Self.FK__FAQ__About_Malar__1273C1CD">
+      <End Role="About_Malaria" EntitySet="About_Malaria" />
+      <End Role="FAQ" EntitySet="FAQs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Help_Line__About__1DE57479" Association="Self.FK__Help_Line__About__1DE57479">
+      <End Role="About_Malaria" EntitySet="About_Malaria" />
+      <End Role="Help_Line" EntitySet="Help_Line" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Malaria_R__About__1B0907CE" Association="Self.FK__Malaria_R__About__1B0907CE">
+      <End Role="About_Malaria" EntitySet="About_Malaria" />
+      <End Role="Malaria_Risk_Zone" EntitySet="Malaria_Risk_Zone" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Post_Upda__About__0F975522" Association="Self.FK__Post_Upda__About__0F975522">
+      <End Role="About_Malaria" EntitySet="About_Malaria" />
+      <End Role="Post_Update" EntitySet="Post_Update" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Preventio__About__0CBAE877" Association="Self.FK__Preventio__About__0CBAE877">
+      <End Role="About_Malaria" EntitySet="About_Malaria" />
+      <End Role="Prevention" EntitySet="Preventions" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Publicati__About__15502E78" Association="Self.FK__Publicati__About__15502E78">
+      <End Role="About_Malaria" EntitySet="About_Malaria" />
+      <End Role="Publication" EntitySet="Publications" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Statistic__About__182C9B23" Association="Self.FK__Statistic__About__182C9B23">
+      <End Role="About_Malaria" EntitySet="About_Malaria" />
+      <End Role="Statistic" EntitySet="Statistics" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Symptom__About_M__09DE7BCC" Association="Self.FK__Symptom__About_M__09DE7BCC">
+      <End Role="About_Malaria" EntitySet="About_Malaria" />
+      <End Role="Symptom" EntitySet="Symptoms" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Treatment__About__023D5A04" Association="Self.FK__Treatment__About__023D5A04">
+      <End Role="About_Malaria" EntitySet="About_Malaria" />
+      <End Role="Treatment" EntitySet="Treatments" />
+    </AssociationSet>
+    <AssociationSet Name="FK__User__User_Role___07020F21" Association="Self.FK__User__User_Role___07020F21">
+      <End Role="User_Role" EntitySet="User_Role" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <EntitySet Name="Employees" EntityType="DBMobile_AppModel.Employee" />
+    <EntitySet Name="sysdiagrams" EntityType="DBMobile_AppModel.sysdiagram" />
+  </EntityContainer>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeID" />
+    </Key>
+    <Property Name="EmployeeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EMPCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+</Schema>
