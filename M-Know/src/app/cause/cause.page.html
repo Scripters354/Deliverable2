@@ -1,0 +1,22 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Malaria Causes
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding >
+  <ion-content>
+    <ion-list inset>
+      <ion-item *ngFor="let c of Causes">
+        <p>{{c.Cause_Name}}</p> <p></p>
+        <p> {{c.Cause_Description}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+ 
+ </ion-content>
