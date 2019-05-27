@@ -11,12 +11,12 @@
 
   <ion-content padding >
       <ion-content>
-        <ion-list inset>
+        <ion-list>
           <ion-item *ngFor="let s of Symptoms">
-            <p>{{s.Symptom_Name}}</p> <br/> 
-            <p> {{s.Symptom_Description}}</p><br/>
-            <p> {{s.Sign_Name}}</p> <br/>
-            <p> {{s.Sign_Description}}</p><br/>
+            <p>{{s.Symptom_Name}}</p> 
+            <ion-col size="6"> <p> {{s.Symptom_Description}}</p></ion-col>
+            <p> {{s.Sign_Name}}</p> 
+            <ion-col size="6"> <p> {{s.Sign_Description}}</p></ion-col>
           </ion-item>
         </ion-list>
       </ion-content>

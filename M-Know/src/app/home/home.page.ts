@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { RestService } from '../rest.service';
+import { RestService } from '../Service/rest.service';
 
 @Component({
   selector: 'app-home',
-  templateUrl: 'home.page.html',
+  templateUrl:'home.page.html',
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {

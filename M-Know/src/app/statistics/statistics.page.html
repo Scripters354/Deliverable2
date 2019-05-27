@@ -4,19 +4,20 @@
         <ion-menu-button></ion-menu-button>
       </ion-buttons>
       <ion-title>
-        Malaria Causes
+        Malaria Statistics
       </ion-title>
     </ion-toolbar>
   </ion-header>
 
   <ion-content padding >
-  <ion-content>
+<ion-content>
     <ion-list inset>
-      <ion-item *ngFor="let c of Causes">
-        <p>{{c.Cause_Name}}</p>  
-        <ion-col size="6"><p>{{c.Cause_Description}}</p></ion-col>
+      <ion-item *ngFor="let s of Statistics">
+        <p>{{s.Malaria_Case}}</p> <br/> 
+        <p> {{s.Malaria_Incidence}}</p><br/>
+        <p> {{s.Malaria_Mortality_Percentage}}</p> <br/>
+
       </ion-item>
     </ion-list>
   </ion-content>
- 
- </ion-content>
+</ion-content>
