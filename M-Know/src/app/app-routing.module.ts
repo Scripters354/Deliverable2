@@ -23,7 +23,8 @@ const routes: Routes = [
    loadChildren: './cause/cause.module#CausePageModule' },
    
   { path: 'symptoms',
-   loadChildren: './symptoms/symptoms.module#SymptomsPageModule' }
+   loadChildren: './symptoms/symptoms.module#SymptomsPageModule' },  { path: 'faqs', loadChildren: './faqs/faqs.module#FAQsPageModule' }
+
 ];
 
 @NgModule({
