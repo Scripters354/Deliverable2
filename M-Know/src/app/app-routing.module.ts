@@ -23,7 +23,24 @@ const routes: Routes = [
    loadChildren: './cause/cause.module#CausePageModule' },
    
   { path: 'symptoms',
-   loadChildren: './symptoms/symptoms.module#SymptomsPageModule' }
+   loadChildren: './symptoms/symptoms.module#SymptomsPageModule' },
+  { path: 'treatment', loadChildren: './treatment/treatment.module#TreatmentPageModule' },
+
+  { path:'treatment',
+    loadChildren: './treatment/treatment.module#TreatmentPageModule'},
+  {path:'prevention',loadChildren: './prevention/prevention.module#PreventionPageModule'},
+
+
+  { path: 'prevention', 
+    loadChildren: './prevention/prevention.module#PreventionPageModule' },
+
+  { path: 'statistics', 
+  loadChildren: './statistics/statistics.module#StatisticsPageModule' }
+
+
+
+
+
 ];
 
 @NgModule({

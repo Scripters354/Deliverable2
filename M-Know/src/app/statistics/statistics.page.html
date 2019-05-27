@@ -1,0 +1,23 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>
+        Malaria Statistics
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding >
+<ion-content>
+    <ion-list inset>
+      <ion-item *ngFor="let s of Statistics">
+        <p>{{s.Malaria_Case}}</p> <br/> 
+        <p> {{s.Malaria_Incidence}}</p><br/>
+        <p> {{s.Malaria_Mortality_Percentage}}</p> <br/>
+
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-content>

@@ -30,6 +30,21 @@ export class AppComponent {
       title: 'Symptoms',
       url: '/symptoms',
       icon: 'symptoms'
+    },
+    {
+      title:'Treatment',
+      url: '/treatment',
+      icon: 'treatment'
+    },
+    {
+      title:'Prevention',
+      url: '/prevention',
+      icon: 'prevention'
+    },
+    {
+      title:'Statistics',
+      url:'/statistics',
+      icon:'statistics'
     }
 
 

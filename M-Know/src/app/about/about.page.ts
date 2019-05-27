@@ -1,6 +1,6 @@
 import { Component  } from '@angular/core';
 import { NavController } from '@ionic/angular';
-import { RestService } from '../rest.service';
+import { RestService } from '../Service/rest.service';
 
 @Component({
   selector: 'app-about',

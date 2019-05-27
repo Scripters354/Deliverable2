@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+          Malaria Prevention
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+<ion-content padding>
+
+    <ion-content>
+        <ion-list inset>
+          <ion-item *ngFor="let p of Prevention">
+            <p>{{p.Prevention_Method}}</p> <br/> 
+          </ion-item>
+        </ion-list>
+      </ion-content>
+      </ion-content>
